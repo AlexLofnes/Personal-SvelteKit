@@ -15,7 +15,7 @@
     let pathfind: boolean = false;
 </script>
 
-<div class="flex -z-10">
+<div class="flex">
     <div class="fixed top-0 left-0 h-screen w-20 flex flex-col bg-slate-800 text-white shadow-lg items-center">
         <button class="sidebarIcon group" on:click={() => {about = true; todo = false; sort = false; pathfind = false}}><IoMdInformationCircleOutline /> <span class="sidebar-tooltip group-hover:scale-100">About</span></button>
         <button class="sidebarIcon group" on:click={() => {about = false; todo = true; sort = false; pathfind = false}}><IoIosCheckboxOutline /> <span class="sidebar-tooltip group-hover:scale-100">Todo List</span></button>
@@ -23,8 +23,6 @@
         <button class="sidebarIcon group" on:click={() => {about = false; todo = false; sort = false; pathfind = true}}><GiMaze /> <span class="sidebar-tooltip group-hover:scale-100">Pathfinding Algorithm Visualisaton</span></button>
     </div>
 </div>
-
-<h1 class="m-30 text-yellow-900">asdas</h1>
 
 <div class="text-gray-200 text-3xl ml-24">
     {#if about}

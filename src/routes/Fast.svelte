@@ -230,9 +230,9 @@
 
 {#each arr as el, i}
     {#if completed}
-        <div class="relative h-{el} w-{elWidth} bg-green-300 inline-block m-0" />
+        <div class="inline-block h-{el*5}px w-{elWidth}px bg-green-300 inline-block m-0 p-0" />
     {:else}
-        <div class="relative h-{el} w {elWidth} bg-slate-100 inline-block m-0" />
+        <div class="inline-block h-{el*5}px w-{elWidth}px bg-slate-100 text-slate-100 inline-block m-0 p-0" />
     {/if}
 {/each}
 

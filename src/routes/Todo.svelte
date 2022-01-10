@@ -1,5 +1,7 @@
 <script lang="ts">
     import MdAddCircleOutline from 'svelte-icons/md/MdAddCircleOutline.svelte';
+    import FaCheck from 'svelte-icons/fa/FaCheck.svelte';
+    import FaRegTrashAlt from 'svelte-icons/fa/FaRegTrashAlt.svelte';
 
 	let adding: boolean = false;
 	let newItem: string = "";
@@ -25,18 +27,18 @@
 </script>
 
 {#if adding}
-	<form on:submit|preventDefault={handleSubmit}>
-		<input class="rounded-xl bg-slate-700" placeholder="Add a new task: " bind:value={newItem}>
-		<button type="submit">Submit</button>
+	<form class="" on:submit|preventDefault={handleSubmit}>
+		<input class="bg-slate-600 bg-opacity-50 rounded-xl h-16 mt-0" placeholder=" New task: " bind:value={newItem}>
+		<button class="sidebarIcon" type="submit"><FaCheck /></button>
 	</form>
 
 {:else}
-<ul class="flex flex-row">
+<ul class="">
 	{#each todos as item}
-		<li class="clicked" on:click={() => item.completed = !item.completed}>{item.name}</li>
-		<img class="w-10 h-10 hover:cursor-pointer" {src} alt="Delte Item" on:click={() => deleteItem(item)}>
+		<li class="pr-6 mt-4 text-5xl" on:click={() => item.completed = !item.completed}>{item.name}</li>
+		<div class="sidebarIcon m-0 h-16" on:click={() => deleteItem(item)}><FaRegTrashAlt /></div>
 	{/each}
 </ul>
 
-<button class="w-10" on:click={addNew}><MdAddCircleOutline /></button>
+<button class="sidebarIcon mt-4" on:click={addNew}><MdAddCircleOutline /></button>
 {/if}
