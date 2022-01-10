@@ -1,0 +1,85 @@
+{
+  ".svelte-kit/build/app.js": {
+    "file": "app.js",
+    "src": ".svelte-kit/build/app.js",
+    "isEntry": true,
+    "imports": [
+      "_index-13c0de55.js"
+    ],
+    "css": [
+      "assets/app-cf837c50.css"
+    ]
+  },
+  ".svelte-kit/build/components/layout.svelte": {
+    "file": "entries/pages/layout.svelte.js",
+    "src": ".svelte-kit/build/components/layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-13c0de55.js"
+    ]
+  },
+  ".svelte-kit/build/components/error.svelte": {
+    "file": "entries/pages/error.svelte.js",
+    "src": ".svelte-kit/build/components/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-13c0de55.js"
+    ]
+  },
+  "src/routes/index.svelte": {
+    "file": "entries/pages/index.svelte.js",
+    "src": "src/routes/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-13c0de55.js"
+    ],
+    "css": [
+      "assets/entries/pages/index.svelte-23a4f3b0.css"
+    ]
+  },
+  "src/routes/Pathfind.svelte": {
+    "file": "entries/pages/Pathfind.svelte.js",
+    "src": "src/routes/Pathfind.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-13c0de55.js"
+    ]
+  },
+  "src/routes/Fast.svelte": {
+    "file": "entries/pages/Fast.svelte.js",
+    "src": "src/routes/Fast.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-13c0de55.js"
+    ]
+  },
+  "src/routes/Slow.svelte": {
+    "file": "entries/pages/Slow.svelte.js",
+    "src": "src/routes/Slow.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-13c0de55.js"
+    ]
+  },
+  "src/routes/Sort.svelte": {
+    "file": "entries/pages/Sort.svelte.js",
+    "src": "src/routes/Sort.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-13c0de55.js",
+      "src/routes/Fast.svelte",
+      "src/routes/Slow.svelte"
+    ]
+  },
+  "src/routes/Todo.svelte": {
+    "file": "entries/pages/Todo.svelte.js",
+    "src": "src/routes/Todo.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-13c0de55.js"
+    ]
+  },
+  "_index-13c0de55.js": {
+    "file": "chunks/index-13c0de55.js"
+  }
+}
