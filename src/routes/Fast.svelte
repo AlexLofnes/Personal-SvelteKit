@@ -230,9 +230,9 @@
 
 {#each arr as el, i}
     {#if completed}
-        <div id={i} style="position: relative;height: {el * 5}px; width: {elWidth}px; background: #52D452;" />
+        <div class="relative h-{el} w-{elWidth} bg-green-300 inline-block m-0" />
     {:else}
-        <div id={i} style="position: relative;height: {el * 5}px; width: {elWidth}px; background: #eeeeee;" />
+        <div class="relative h-{el} w {elWidth} bg-slate-100 inline-block m-0" />
     {/if}
 {/each}
 

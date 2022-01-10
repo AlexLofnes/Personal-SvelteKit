@@ -2,8 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    h1, h2, h3, h4 {
-        @apply font-bold;
+@layer components {
+
+    .sidebarIcon {
+        @apply w-16 p-2 my-4 bg-slate-700 rounded-3xl hover:text-green-300 hover:rounded-xl hover:bg-gray-700 transition-all duration-300 ease-linear;
     }
+
+    .sidebar-tooltip { 
+        @apply absolute w-auto pl-2 ml-2 min-w-max left-16 rounded-md shadow-md text-white bg-gray-900 text-xs font-bold transition-all duration-100 scale-0 origin-left;
+  }
+
 }

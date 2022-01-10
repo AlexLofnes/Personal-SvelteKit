@@ -1,5 +1,6 @@
 <script lang="ts">
     import '../app.css';
+    import About from './About.svelte'
     import Todo from './Todo.svelte';
     import Sort from './Sort.svelte';
     import Pathfind from './Pathfind.svelte';
@@ -16,10 +17,10 @@
 
 <div class="flex -z-10">
     <div class="fixed top-0 left-0 h-screen w-20 flex flex-col bg-slate-800 text-white shadow-lg items-center">
-        <button class="w-16 p-2 my-4 bg-slate-700 rounded-3xl hover:text-green-300 hover:rounded-xl hover:bg-gray-700 transition-all duration-300 ease-linear" on:click={() => {about = true; todo = false; sort = false; pathfind = false}}><IoMdInformationCircleOutline /></button>
-        <button class="w-16 p-2 my-4 bg-slate-700 rounded-3xl hover:text-green-300 hover:rounded-xl hover:bg-gray-700 transition-all duration-300 ease-linear" on:click={() => {about = false; todo = true; sort = false; pathfind = false}}><IoIosCheckboxOutline /></button>
-        <button class="w-16 p-2 my-4 bg-slate-700 rounded-3xl hover:text-green-300 hover:rounded-xl hover:bg-gray-700 transition-all duration-300 ease-linear" on:click={() => {about = false; todo = false; sort = true; pathfind = false}}><FaSortAlphaDown /></button>
-        <button class="w-16 p-2 my-4 bg-slate-700 rounded-3xl hover:text-green-300 hover:rounded-xl hover:bg-gray-700 transition-all duration-300 ease-linear" on:click={() => {about = false; todo = false; sort = false; pathfind = true}}><GiMaze /></button>
+        <button class="sidebarIcon group" on:click={() => {about = true; todo = false; sort = false; pathfind = false}}><IoMdInformationCircleOutline /> <span class="sidebar-tooltip group-hover:scale-100">About</span></button>
+        <button class="sidebarIcon group" on:click={() => {about = false; todo = true; sort = false; pathfind = false}}><IoIosCheckboxOutline /> <span class="sidebar-tooltip group-hover:scale-100">Todo List</span></button>
+        <button class="sidebarIcon group" on:click={() => {about = false; todo = false; sort = true; pathfind = false}}><FaSortAlphaDown /> <span class="sidebar-tooltip group-hover:scale-100">Sorting Algorithm Visualisaton</span></button>
+        <button class="sidebarIcon group" on:click={() => {about = false; todo = false; sort = false; pathfind = true}}><GiMaze /> <span class="sidebar-tooltip group-hover:scale-100">Pathfinding Algorithm Visualisaton</span></button>
     </div>
 </div>
 
@@ -27,12 +28,14 @@
 
 <div class="text-gray-200 text-3xl ml-24">
     {#if about}
-        <h1>About This Website</h1>
+        <About />
     {:else if todo}
         <Todo />
     {:else if sort}
         <Sort />
     {:else if pathfind}
         <Pathfind />
+    {:else}
+        <About />
     {/if}
 </div>
