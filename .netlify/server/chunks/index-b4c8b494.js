@@ -6,14 +6,18 @@ var __export = (target, all) => {
     __defProp(target, name, { get: all[name], enumerable: true });
 };
 __export(exports, {
-  a: () => add_attribute,
-  b: () => each,
+  a: () => safe_not_equal,
+  b: () => add_attribute,
   c: () => create_ssr_component,
+  d: () => each,
   e: () => escape,
   m: () => missing_component,
+  n: () => noop,
   s: () => setContext,
   v: () => validate_component
 });
+function noop() {
+}
 function run(fn) {
   return fn();
 }
@@ -22,6 +26,9 @@ function blank_object() {
 }
 function run_all(fns) {
   fns.forEach(run);
+}
+function safe_not_equal(a, b) {
+  return a != a ? b == b : a !== b || (a && typeof a === "object" || typeof a === "function");
 }
 let current_component;
 function set_current_component(component) {

@@ -24,7 +24,7 @@ var __toModule = (module2) => {
 __export(exports, {
   default: () => Pathfind
 });
-var import_index_13c0de55 = __toModule(require("../../chunks/index-13c0de55.js"));
-const Pathfind = (0, import_index_13c0de55.c)(($$result, $$props, $$bindings, slots) => {
+var import_index_b4c8b494 = __toModule(require("../../chunks/index-b4c8b494.js"));
+const Pathfind = (0, import_index_b4c8b494.c)(($$result, $$props, $$bindings, slots) => {
   return `<h1>This is currently in the works (not working yet)</h1>`;
 });

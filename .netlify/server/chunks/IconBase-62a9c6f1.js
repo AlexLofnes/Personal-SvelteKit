@@ -22,26 +22,21 @@ var __toModule = (module2) => {
   return __reExport(__markAsModule(__defProp(module2 != null ? __create(__getProtoOf(module2)) : {}, "default", module2 && module2.__esModule && "default" in module2 ? { get: () => module2.default, enumerable: true } : { value: module2, enumerable: true })), module2);
 };
 __export(exports, {
-  default: () => Error2,
-  load: () => load
+  I: () => IconBase
 });
-var import_index_b4c8b494 = __toModule(require("../../chunks/index-b4c8b494.js"));
-function load({ error, status }) {
-  return { props: { error, status } };
-}
-const Error2 = (0, import_index_b4c8b494.c)(($$result, $$props, $$bindings, slots) => {
-  let { status } = $$props;
-  let { error } = $$props;
-  if ($$props.status === void 0 && $$bindings.status && status !== void 0)
-    $$bindings.status(status);
-  if ($$props.error === void 0 && $$bindings.error && error !== void 0)
-    $$bindings.error(error);
-  return `<h1>${(0, import_index_b4c8b494.e)(status)}</h1>
-
-<pre>${(0, import_index_b4c8b494.e)(error.message)}</pre>
-
-
-
-${error.frame ? `<pre>${(0, import_index_b4c8b494.e)(error.frame)}</pre>` : ``}
-${error.stack ? `<pre>${(0, import_index_b4c8b494.e)(error.stack)}</pre>` : ``}`;
+var import_index_b4c8b494 = __toModule(require("./index-b4c8b494.js"));
+var IconBase_svelte_svelte_type_style_lang = "";
+const css = {
+  code: "svg.svelte-c8tyih{stroke:currentColor;fill:currentColor;stroke-width:0;width:100%;height:auto;max-height:100%}",
+  map: null
+};
+const IconBase = (0, import_index_b4c8b494.c)(($$result, $$props, $$bindings, slots) => {
+  let { title = null } = $$props;
+  let { viewBox } = $$props;
+  if ($$props.title === void 0 && $$bindings.title && title !== void 0)
+    $$bindings.title(title);
+  if ($$props.viewBox === void 0 && $$bindings.viewBox && viewBox !== void 0)
+    $$bindings.viewBox(viewBox);
+  $$result.css.add(css);
+  return `<svg xmlns="${"http://www.w3.org/2000/svg"}"${(0, import_index_b4c8b494.b)("viewBox", viewBox, 0)} class="${"svelte-c8tyih"}">${title ? `<title>${(0, import_index_b4c8b494.e)(title)}</title>` : ``}${slots.default ? slots.default({}) : ``}</svg>`;
 });

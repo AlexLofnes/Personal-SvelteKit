@@ -27,7 +27,7 @@ __export(exports, {
   js: () => js,
   module: () => module2
 });
-var module2 = __toModule(require("../entries/pages/Slow.svelte.js"));
-const entry = "pages/Slow.svelte-ff74027b.js";
-const js = ["pages/Slow.svelte-ff74027b.js", "chunks/vendor-cbdddae2.js"];
+var module2 = __toModule(require("../entries/pages/Fast.svelte.js"));
+const entry = "pages/Fast.svelte-be93395a.js";
+const js = ["pages/Fast.svelte-be93395a.js", "chunks/vendor-39aac801.js"];
 const css = ["assets/vendor-86f8c920.css"];

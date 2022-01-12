@@ -24,12 +24,12 @@ var __toModule = (module2) => {
 __export(exports, {
   default: () => Sort
 });
-var import_index_13c0de55 = __toModule(require("../../chunks/index-13c0de55.js"));
+var import_index_b4c8b494 = __toModule(require("../../chunks/index-b4c8b494.js"));
 var import_Fast_svelte = __toModule(require("./Fast.svelte.js"));
 var import_Slow_svelte = __toModule(require("./Slow.svelte.js"));
-const Sort = (0, import_index_13c0de55.c)(($$result, $$props, $$bindings, slots) => {
+const Sort = (0, import_index_b4c8b494.c)(($$result, $$props, $$bindings, slots) => {
   return `<h1>Faster and more accurate to the algorithm&#39;s speed</h1>
-${(0, import_index_13c0de55.v)(import_Fast_svelte.default, "Fast").$$render($$result, {}, {}, {})}
+${(0, import_index_b4c8b494.v)(import_Fast_svelte.default, "Fast").$$render($$result, {}, {}, {})}
 <h1>Slower but easier to see what is happening and the differences between each algorithm</h1>
-${(0, import_index_13c0de55.v)(import_Slow_svelte.default, "Slow").$$render($$result, {}, {}, {})}`;
+${(0, import_index_b4c8b494.v)(import_Slow_svelte.default, "Slow").$$render($$result, {}, {}, {})}`;
 });

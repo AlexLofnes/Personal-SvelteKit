@@ -24,7 +24,7 @@ var __toModule = (module2) => {
 __export(exports, {
   default: () => Layout
 });
-var import_index_13c0de55 = __toModule(require("../../chunks/index-13c0de55.js"));
-const Layout = (0, import_index_13c0de55.c)(($$result, $$props, $$bindings, slots) => {
+var import_index_b4c8b494 = __toModule(require("../../chunks/index-b4c8b494.js"));
+const Layout = (0, import_index_b4c8b494.c)(($$result, $$props, $$bindings, slots) => {
   return `${slots.default ? slots.default({}) : ``}`;
 });

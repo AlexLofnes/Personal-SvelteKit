@@ -27,7 +27,7 @@ __export(exports, {
   js: () => js,
   module: () => module2
 });
-var module2 = __toModule(require("../entries/pages/error.svelte.js"));
-const entry = "error.svelte-463f0cc5.js";
-const js = ["error.svelte-463f0cc5.js", "chunks/vendor-39aac801.js"];
+var module2 = __toModule(require("../entries/pages/Todo.svelte.js"));
+const entry = "pages/Todo.svelte-d231277a.js";
+const js = ["pages/Todo.svelte-d231277a.js", "chunks/vendor-39aac801.js"];
 const css = ["assets/vendor-86f8c920.css"];

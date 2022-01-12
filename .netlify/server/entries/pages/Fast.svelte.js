@@ -24,8 +24,8 @@ var __toModule = (module2) => {
 __export(exports, {
   default: () => Fast
 });
-var import_index_13c0de55 = __toModule(require("../../chunks/index-13c0de55.js"));
-const Fast = (0, import_index_13c0de55.c)(($$result, $$props, $$bindings, slots) => {
+var import_index_b4c8b494 = __toModule(require("../../chunks/index-b4c8b494.js"));
+const Fast = (0, import_index_b4c8b494.c)(($$result, $$props, $$bindings, slots) => {
   let arr = [];
   let timeTaken, completed = false, elWidth = 1;
   let screenWidth = window.innerWidth - 50;
@@ -55,10 +55,10 @@ const Fast = (0, import_index_13c0de55.c)(($$result, $$props, $$bindings, slots)
     <button>Flash Sort</button></main>
 <br>
 
-${(0, import_index_13c0de55.b)(arr, (el, i) => `${completed ? `<div${(0, import_index_13c0de55.a)("id", i, 0)} style="${"position: relative;height: " + (0, import_index_13c0de55.e)(el * 5) + "px; width: " + (0, import_index_13c0de55.e)(elWidth) + "px; background: #52D452;"}"></div>` : `<div${(0, import_index_13c0de55.a)("id", i, 0)} style="${"position: relative;height: " + (0, import_index_13c0de55.e)(el * 5) + "px; width: " + (0, import_index_13c0de55.e)(elWidth) + "px; background: #eeeeee;"}"></div>`}`)}
+${(0, import_index_b4c8b494.d)(arr, (el, i) => `${completed ? `<div class="${"inline-block h-" + (0, import_index_b4c8b494.e)(el * 5) + "px w-" + (0, import_index_b4c8b494.e)(elWidth) + "px bg-green-300 inline-block m-0 p-0"}"></div>` : `<div class="${"inline-block h-" + (0, import_index_b4c8b494.e)(el * 5) + "px w-" + (0, import_index_b4c8b494.e)(elWidth) + "px bg-slate-100 text-slate-100 inline-block m-0 p-0"}"></div>`}`)}
 
-<input type="${"number"}" placeholder="${"Number of elements"}"${(0, import_index_13c0de55.a)("value", screenWidth, 0)}>
-<input type="${"number"}" placeholder="${"Width of elements"}"${(0, import_index_13c0de55.a)("value", elWidth, 0)}>
+<input type="${"number"}" placeholder="${"Number of elements"}"${(0, import_index_b4c8b494.b)("value", screenWidth, 0)}>
+<input type="${"number"}" placeholder="${"Width of elements"}"${(0, import_index_b4c8b494.b)("value", elWidth, 0)}>
 
-<h2>It took: ${(0, import_index_13c0de55.e)(timeTaken)} seconds to sort ${(0, import_index_13c0de55.e)(screenWidth)} elements</h2>`;
+<h2>It took: ${(0, import_index_b4c8b494.e)(timeTaken)} seconds to sort ${(0, import_index_b4c8b494.e)(screenWidth)} elements</h2>`;
 });

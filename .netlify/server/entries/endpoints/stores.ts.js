@@ -22,26 +22,49 @@ var __toModule = (module2) => {
   return __reExport(__markAsModule(__defProp(module2 != null ? __create(__getProtoOf(module2)) : {}, "default", module2 && module2.__esModule && "default" in module2 ? { get: () => module2.default, enumerable: true } : { value: module2, enumerable: true })), module2);
 };
 __export(exports, {
-  default: () => Error2,
-  load: () => load
+  user: () => user
 });
 var import_index_b4c8b494 = __toModule(require("../../chunks/index-b4c8b494.js"));
-function load({ error, status }) {
-  return { props: { error, status } };
+const subscriber_queue = [];
+function writable(value, start = import_index_b4c8b494.n) {
+  let stop;
+  const subscribers = new Set();
+  function set(new_value) {
+    if ((0, import_index_b4c8b494.a)(value, new_value)) {
+      value = new_value;
+      if (stop) {
+        const run_queue = !subscriber_queue.length;
+        for (const subscriber of subscribers) {
+          subscriber[1]();
+          subscriber_queue.push(subscriber, value);
+        }
+        if (run_queue) {
+          for (let i = 0; i < subscriber_queue.length; i += 2) {
+            subscriber_queue[i][0](subscriber_queue[i + 1]);
+          }
+          subscriber_queue.length = 0;
+        }
+      }
+    }
+  }
+  function update(fn) {
+    set(fn(value));
+  }
+  function subscribe(run, invalidate = import_index_b4c8b494.n) {
+    const subscriber = [run, invalidate];
+    subscribers.add(subscriber);
+    if (subscribers.size === 1) {
+      stop = start(set) || import_index_b4c8b494.n;
+    }
+    run(value);
+    return () => {
+      subscribers.delete(subscriber);
+      if (subscribers.size === 0) {
+        stop();
+        stop = null;
+      }
+    };
+  }
+  return { set, update, subscribe };
 }
-const Error2 = (0, import_index_b4c8b494.c)(($$result, $$props, $$bindings, slots) => {
-  let { status } = $$props;
-  let { error } = $$props;
-  if ($$props.status === void 0 && $$bindings.status && status !== void 0)
-    $$bindings.status(status);
-  if ($$props.error === void 0 && $$bindings.error && error !== void 0)
-    $$bindings.error(error);
-  return `<h1>${(0, import_index_b4c8b494.e)(status)}</h1>
-
-<pre>${(0, import_index_b4c8b494.e)(error.message)}</pre>
-
-
-
-${error.frame ? `<pre>${(0, import_index_b4c8b494.e)(error.frame)}</pre>` : ``}
-${error.stack ? `<pre>${(0, import_index_b4c8b494.e)(error.stack)}</pre>` : ``}`;
-});
+const user = writable(void 0);
